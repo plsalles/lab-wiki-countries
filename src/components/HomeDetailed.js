@@ -7,8 +7,8 @@ import CountriesList from './CountriesList';
 import CountryDetail from './CountryDetail';
 
 function HomeDetailed(props) {
-    console.log(props.match.params)
-    return (
+
+  return (
         <div className="row">
           <CountriesList/>
           <CountryDetail cca3={props.match.params}/>

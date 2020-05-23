@@ -11,8 +11,10 @@ function App ( ) {
   return (
     <div>
         <Switch >
+          {/* Limitado as props defaults do React DOM passa */}
           <Route exact path='/' component={Home}/>
-          <Route path='/country/:id' component={HomeDetailed} />
+          {/* Passa as props + qualquer outra prop que desejar */}
+          <Route path='/country/:id' render={props =>  <HomeDetailed {...props}/> } />
         </Switch>
     </div>
   );
